@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">OpenGl</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">主页</string>
+    <string name="msg">消息</string>
+    <string name="me">我</string>
+    <string name="game">游戏ing</string>
+</resources>

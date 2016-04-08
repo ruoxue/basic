@@ -1,0 +1,11 @@
+/build
+新建base文件
+引入design
+新增mvp模式
+添加opengl
+首页新增list
+点击进入opengl界面
+增加kotlin语言支持
+转换java 2 kotlin
+opengl绘制三角形
+增加触摸事件背景变化
