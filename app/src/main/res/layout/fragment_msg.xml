@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="xyz.ruoxue.opengl.ui.fragment.home.MsgFragment">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        style="@style/Whl_Mzo">
+
+        <ListView
+            android:id="@+id/lv_msg"
+            style="@style/Wh_Mw.Lv"></ListView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>
