@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AbsListView
 import android.widget.ExpandableListView
 import xyz.ruoxue.opengl.R
 import xyz.ruoxue.opengl.entities.MsgMode
@@ -22,13 +23,11 @@ class MsgFragment : BasicFragment(), IMsgView {
     private var elv_msg: ExpandableListView? = null
     private var msgPresenter: MsgPresenter? = null
     private var adapter: MsgAdapter<String>? = null
-    private var list: ArrayList<MsgMode<String>>? = null
+    private var list: ArrayList<MsgMode<String>>? = ArrayList<MsgMode<String>>()
 
     override fun initData() {
         elv_msg = activity.findViewById(R.id.elv_msg) as  ExpandableListView
         for (i in 1..10) {
-            list = ArrayList<MsgMode<String>>()
-
 
             var m = MsgMode<String>()
 
@@ -36,9 +35,9 @@ class MsgFragment : BasicFragment(), IMsgView {
             var l = ArrayList<String>()
             l.add(i.toString())
             m.list = l
-
             list?.add(m)
-            list?.add(m) ;list?.add(m)
+            list?.add(m)
+            list?.add(m)
 
         }
 
@@ -51,6 +50,16 @@ class MsgFragment : BasicFragment(), IMsgView {
             adapter!!.notifyDataSetChanged()
         }
 
+
+        elv_msg!!.setOnScrollListener(object :AbsListView.OnScrollListener{
+            override fun onScroll(view: AbsListView?, firstVisibleItem: Int, visibleItemCount: Int, totalItemCount: Int) {
+
+            }
+
+            override fun onScrollStateChanged(view: AbsListView?, scrollState: Int) {
+
+            }
+        })
 
     }
 
