@@ -1,6 +1,6 @@
 package xyz.ruoxue.opengl.ui.activity
 
-import android.R
+
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -8,6 +8,8 @@ import android.content.IntentFilter
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import android.widget.TextView
+import xyz.ruoxue.opengl.R
 import xyz.ruoxue.opengl.ui.view.BasicViewI
 
 /**
@@ -33,6 +35,8 @@ abstract class BasicActivity : AppCompatActivity(), BasicViewI {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.setCustomView(R.layout.item_title)
+
 
     }
 
@@ -40,7 +44,6 @@ abstract class BasicActivity : AppCompatActivity(), BasicViewI {
     fun isBack(flag: Boolean) {
         supportActionBar!!.setDisplayHomeAsUpEnabled(flag)
         supportActionBar!!.setHomeButtonEnabled(flag)
-
 
     }
 
@@ -62,10 +65,14 @@ abstract class BasicActivity : AppCompatActivity(), BasicViewI {
 
     fun setCustomeTitle(title: String) {
         setTitle(title)
+        val tvTitle = supportActionBar?.customView?.findViewById(R.id.tv_title) as  TextView
+        tvTitle.text = title
     }
 
     fun setCustomeTitle(title: Int) {
-        setTitle(title)
+
+
+             setTitle(title)
     }
 
 

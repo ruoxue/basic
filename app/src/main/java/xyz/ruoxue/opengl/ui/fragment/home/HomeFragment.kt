@@ -50,7 +50,7 @@ open class HomeFragment : BasicFragment(), HomeFragementViewI {
         } else {
             adapter!!.notifyDataSetChanged()
         }
-
+        lvHome!!.setSelection(0)
 
     }
 

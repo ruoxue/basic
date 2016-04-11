@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.support.design.widget.TabLayout
 import android.support.v4.view.ViewPager
 import android.view.KeyEvent
-import android.view.Window
 import com.pawegio.kandroid.find
 import com.pawegio.kandroid.toast
 import me.relex.circleindicator.CircleIndicator
@@ -37,9 +36,9 @@ class HomeActivity : BasicActivity(), HomeViewI {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        this.requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
+
         setContentView(R.layout.activity_home)
-        window.setFeatureInt(Window.FEATURE_INDETERMINATE_PROGRESS, R.layout.progress);
+
 
         homePresent = HomePresenter(this)
     }

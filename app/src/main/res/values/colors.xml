@@ -8,4 +8,5 @@
     <color name="indicator_2">#0f0</color>
     <color name="indicator_3">#00f</color>
     <color name="indicator_4">#ff0</color>
+    <color name="title_color">#333</color>
 </resources>

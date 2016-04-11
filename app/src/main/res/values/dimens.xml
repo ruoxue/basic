@@ -5,4 +5,5 @@
     <dimen name="zero">0dip</dimen>
     <dimen name="bottom_height">448dip</dimen>
     <dimen name="line">1dip</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>
