@@ -4,4 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="dividi">#333</color>
+    <color name="indicator_1">#f00</color>
+    <color name="indicator_2">#0f0</color>
+    <color name="indicator_3">#00f</color>
+    <color name="indicator_4">#ff0</color>
 </resources>

@@ -8,9 +8,21 @@
     android:orientation="vertical"
     tools:context=".ui.activity.home.HomeActivity">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/m_vp_home"
-        style="@style/Whl_Mzo"></android.support.v4.view.ViewPager>
+    <FrameLayout
+        style="@style/Whl_Mzo">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/m_vp_home"
+            style="@style/Wh_Mm"></android.support.v4.view.ViewPager>
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/ci"
+            android:layout_width="match_parent"
+           app:ci_drawable_unselected="@android:drawable/star_big_on"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            app:ci_drawable="@android:drawable/star_big_off"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+
+
 
     <android.support.design.widget.TabLayout
         android:id="@+id/m_tab_home"

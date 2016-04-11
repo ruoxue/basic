@@ -7,6 +7,7 @@ import android.view.KeyEvent
 import android.view.Window
 import com.pawegio.kandroid.find
 import com.pawegio.kandroid.toast
+import me.relex.circleindicator.CircleIndicator
 import xyz.ruoxue.opengl.R
 import xyz.ruoxue.opengl.ui.activity.BasicActivity
 import xyz.ruoxue.opengl.ui.adapter.fragmentAdapter.BasicFragementAdapter
@@ -25,6 +26,7 @@ class HomeActivity : BasicActivity(), HomeViewI {
     /*
      *view  init
      */
+    private val ci: CircleIndicator by lazy { find<CircleIndicator>(R.id.ci) }
     private val mVpHome: ViewPager by lazy { find<ViewPager>(R.id.m_vp_home) }
     private val mTabHome: TabLayout by lazy { find<TabLayout>(R.id.m_tab_home) }
     private var homePresent: HomePresenter? = null
@@ -50,7 +52,7 @@ class HomeActivity : BasicActivity(), HomeViewI {
         fs.add(MsgFragment())
         fs.add(MeFragment())
 
-        mVpHome.offscreenPageLimit=fs.size
+        mVpHome.offscreenPageLimit = fs.size
         if (homeAdapter == null) {
             homeAdapter = BasicFragementAdapter(supportFragmentManager, fs)
             mVpHome.adapter = homeAdapter
@@ -58,6 +60,7 @@ class HomeActivity : BasicActivity(), HomeViewI {
             homeAdapter!!.notifyDataSetChanged()
         }
         mTabHome.setupWithViewPager(mVpHome)
+        ci.setViewPager(mVpHome)
         mTabHome.removeAllTabs()
         mTabHome.addTab(mTabHome.newTab().setText(R.string.home).setIcon(R.drawable.bg_home), 0)
         mTabHome.addTab(mTabHome.newTab().setText(R.string.msg).setIcon(R.drawable.bg_home), 1)

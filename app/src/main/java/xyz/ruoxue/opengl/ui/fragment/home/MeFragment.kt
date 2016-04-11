@@ -10,6 +10,13 @@ import xyz.ruoxue.opengl.ui.fragment.BasicFragment
 
 
 class MeFragment : BasicFragment() {
+    override fun initData() {
+
+    }
+
+    override fun initEvent() {
+        throw UnsupportedOperationException()
+    }
 
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
