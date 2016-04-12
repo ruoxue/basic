@@ -34,7 +34,12 @@ class MsgFragment : BasicFragment(), IMsgView {
             m.group = i.toString()
             var l = ArrayList<String>()
             l.add(i.toString())
+            l.add(i.toString())
+            l.add(i.toString())
+
             m.list = l
+            m.list = l
+
             list?.add(m)
             list?.add(m)
             list?.add(m)
